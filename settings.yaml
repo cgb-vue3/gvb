@@ -1,0 +1,76 @@
+# 数据库相关配置
+mysql :
+    database: mysql  #数据库
+    user: root        #用户名
+    pass: 123456      #密码
+    host: 127.0.0.1  #主机地址
+    port: 3306        #端口
+    dbname: gvb    #数据库名字
+    charset: utf8     #协议
+    maxIdleConns: 100 # 最大空闲连接数
+    logLevel: info    # log level
+    logEnable: false    # Enable logging or not
+    logFormat: text  # text or json
+    logPath:   logs/sql/
+    logType: stdout    # files or stdout
+    env : "dev"
+
+# 日志相关配置
+logger :
+    level: debug    # 日志模式
+    prefix: '[gvb]' # 日志前缀
+    director: log   # 日志存放目录
+    showLine: true #显示文件名和行号
+    logInConsole: true
+    filePath: logs/app/ # 文件名
+    maxSize: 20       # 日志文件保留最大尺寸
+    maxBackups: 10      # 保留日志文件最大个数
+    maxAge: 30         #保留日志文件最大天数
+
+# 系统相关配置
+system :
+    port: 8080     # 端口号
+    ENV: local # 控制输出
+
+# 上传文件相关配置
+upload :
+    filePath: "upload/images" # 图片上传路径
+    fileSize: 5 # 图片大小
+
+# qiNiu
+qiNiu:
+    enable: true
+    accessKey: rsabvDKcxGOzeXbtR-8dF9GnUijb10BQrBuo7m5X
+    secretKey: PnVkBEZwrgYG82r4NDx3lWgRF621bluJ7mfxUA5b
+    zone: z2    # 机房
+    bucKet: akitablog    # 桶
+    cdn: http://s60eoyegv.hn-bkt.clouddn.com/ # 外链
+
+
+# redis
+redis:
+    host: '192.168.30.130'
+    port:  '6379'
+    password: ''            # 密码
+    poolSize: 10            # 连接池
+    idleTimeout: '5000ms'   #
+    readTimeout: '3000ms'   # 读超时
+    writeTimeout: '3000ms'  # 写超时
+    minIdleConns: 5         # 最小连接数
+    retries: 3              # 重试
+    db: 0                   # 索引
+
+# jwt
+jwt:
+    secret: "akitaKey" # 密钥
+#    expires_at: 5 # 过期时间
+#    issued_at: # 签发时间
+    issuer: "akita" # 签发人
+
+# email
+email:
+    host: 'smtp.qq.com'
+    port: 465
+    form: '<1240092443@qq.com>'
+    user: '1240092443'
+    pass: 'skxrcpngjhcmidcf'
